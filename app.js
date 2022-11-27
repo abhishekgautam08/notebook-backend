@@ -12,6 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 //Avaiable routes
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
 
